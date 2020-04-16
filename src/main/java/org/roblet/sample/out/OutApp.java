@@ -2,7 +2,7 @@
 package org.roblet.sample.out;
 
 
-public class  App
+public class  OutApp
 {
 
     public static void  main (String[] args)
