@@ -16,4 +16,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.roblet</groupId>
+            <artifactId>roblet-client</artifactId>
+            <version>0.2</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
