@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.roblet</groupId>
             <artifactId>roblet-client</artifactId>
-            <version>0.2</version>
+            <version>3.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>

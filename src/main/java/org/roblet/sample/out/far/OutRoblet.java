@@ -29,7 +29,7 @@ public class  OutRoblet
     private PrintStream  out (Robot robot)
         throws Exception
     {
-        Proxies  proxies = (Proxies) robot. getUnit (Proxies.class);
+        Proxies  proxies = robot. getUnit (Proxies.class);
         if (proxies == null)
             throw new Exception ("Unit " + Proxies.class + " missing");
 
