@@ -1,10 +1,8 @@
 
 package org.roblet.sample.out;
 
+import org.roblet.client.Slot;
 import org.roblet.sample.out.far.OutRoblet;
-
-import genRob.genControl.client.Client;
-import genRob.genControl.client.Slot;
 
 
 public class  OutApp
@@ -15,12 +13,10 @@ public class  OutApp
     {
         System.out.println ("app hello");
 
-        Slot  slot = new Client ()
-                        . getServer ("localhost")
-                        . getSlot ();
-        slot. offerRemote (new NearImpl ());
-
-        slot. run (new OutRoblet ());
+        try (Slot slot = new Slot ("localhost")) {
+            slot. offer (new NearImpl ());
+            slot. run (new OutRoblet ());
+        }
     }
 
 }

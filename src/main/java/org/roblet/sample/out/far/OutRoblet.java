@@ -11,17 +11,19 @@ import genRob.genControl.unit.Proxies;
 
 
 public class  OutRoblet
-    implements Roblet, Serializable
+    implements Roblet<Void>, Serializable
 {
 
     @Override
-    public Object  execute (Robot robot)
-        throws Exception
+    public Void  execute (Robot robot)
     {
-        PrintStream  out = out (robot);
+        try (PrintStream out = out (robot)) {
+            out. println ("roblet hello");
+            out. flush ();
+        } catch (Exception e) {
+            throw new RuntimeException (e);
+        }
 
-        out. println ("roblet hello");
-        out. flush ();
 
         return null;
     }
